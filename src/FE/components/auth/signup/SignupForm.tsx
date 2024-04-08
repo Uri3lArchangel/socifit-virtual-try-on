@@ -129,119 +129,119 @@ const calculateStrength = (pass: string) => {
   const confirmPasswordRef = useRef<HTMLInputElement>(null);
 
  // Credentials sign up function
- const SignupSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    if (
-      !emailRef ||
-      !passwordRef ||
-      !confirmPasswordRef ||
-      !emailRef.current ||
-      !passwordRef.current ||
-      !confirmPasswordRef.current ||
-      !unameRef.current
-    ) {
-      return;
-    }
-    let email_display=(document.getElementById("email_display") as HTMLParagraphElement)
-    let uname_display=(document.getElementById("uname_display") as HTMLParagraphElement)
-    let d = document.getElementById('password_display') as HTMLParagraphElement;
-    const terms = document.getElementById("termsAndConditions") as HTMLInputElement;
-    const pass = document.getElementById("pass_display") as HTMLDivElement;
+//  const SignupSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+//     e.preventDefault();
+//     if (
+//       !emailRef ||
+//       !passwordRef ||
+//       !confirmPasswordRef ||
+//       !emailRef.current ||
+//       !passwordRef.current ||
+//       !confirmPasswordRef.current ||
+//       !unameRef.current
+//     ) {
+//       return;
+//     }
+//     let email_display=(document.getElementById("email_display") as HTMLParagraphElement)
+//     let uname_display=(document.getElementById("uname_display") as HTMLParagraphElement)
+//     let d = document.getElementById('password_display') as HTMLParagraphElement;
+//     const terms = document.getElementById("termsAndConditions") as HTMLInputElement;
+//     const pass = document.getElementById("pass_display") as HTMLDivElement;
 
     
 
-    email_display.innerText="";
-    uname_display.innerText=""
-    d.innerText=""
-    terms.innerText=""
-    pass.innerText=""
+//     email_display.innerText="";
+//     uname_display.innerText=""
+//     d.innerText=""
+//     terms.innerText=""
+//     pass.innerText=""
 
-    if(unameRef.current.value.length == 0){
-      uname_display.innerText="Provide a username";
-     uname_display.style.color="red"
+//     if(unameRef.current.value.length == 0){
+//       uname_display.innerText="Provide a username";
+//      uname_display.style.color="red"
 
-      return
-    }
-    if(emailRef.current.value.length == 0){
-      email_display.innerText="Provide an email address";
-      email_display.style.color="red"
+//       return
+//     }
+//     if(emailRef.current.value.length == 0){
+//       email_display.innerText="Provide an email address";
+//       email_display.style.color="red"
 
-      return
-    }
-    let s = validateEmail(emailRef.current.value)
-    if(s.status == "error")
-    {
-      email_display.innerText="Invalid email address";
-      email_display.style.color="red"
+//       return
+//     }
+//     let s = validateEmail(emailRef.current.value)
+//     if(s.status == "error")
+//     {
+//       email_display.innerText="Invalid email address";
+//       email_display.style.color="red"
 
-      return
-    }
-    if(strength == 0){
-      pass.innerText="Provide a password"
-      pass.style.color="red"
-      return
+//       return
+//     }
+//     if(strength == 0){
+//       pass.innerText="Provide a password"
+//       pass.style.color="red"
+//       return
 
-    }
-    if(passwordRef.current.value.length ==0){
-      d.innerText="Confirm your password"
-      d.style.color="red"
-      return
+//     }
+//     if(passwordRef.current.value.length ==0){
+//       d.innerText="Confirm your password"
+//       d.style.color="red"
+//       return
 
-    }
-    if(strength <3){
+//     }
+//     if(strength <3){
 
-      return
-    }
-    if(passwordRef.current.value != confirmPasswordRef.current.value){
-      d.innerText = "Passwords do not match"
-      d.style.color="red"
-      return
-    }
-    const body = {
-      email: emailRef.current.value,
-      password: passwordRef.current.value,
-      username:unameRef.current.value,
-      confirmPassword: confirmPasswordRef.current.value,
-    };
-    if(!terms.checked){
-     (document.getElementById("terms_display") as HTMLInputElement ).innerText="Please check the terms and conditions box";
-     (document.getElementById("terms_display") as HTMLInputElement ).style.color='red'
-     return
+//       return
+//     }
+//     if(passwordRef.current.value != confirmPasswordRef.current.value){
+//       d.innerText = "Passwords do not match"
+//       d.style.color="red"
+//       return
+//     }
+//     const body = {
+//       email: emailRef.current.value,
+//       password: passwordRef.current.value,
+//       username:unameRef.current.value,
+//       confirmPassword: confirmPasswordRef.current.value,
+//     };
+//     if(!terms.checked){
+//      (document.getElementById("terms_display") as HTMLInputElement ).innerText="Please check the terms and conditions box";
+//      (document.getElementById("terms_display") as HTMLInputElement ).style.color='red'
+//      return
 
-    }
-    email_display.innerText="";
-    uname_display.innerText=""
-    d.innerText=""
-    terms.innerText=""
-    pass.innerText=""
-    setLoading(true)
-    const res = await fetch(URLRESOLVE("/api/auth/sign-up"), {
-      method: "POST",
-      mode: "no-cors",
-      cache: "no-cache",
-      body: JSON.stringify(body),
-    });
-    setLoading(false)
-    if (res.status == 201) {
-      notification({
-        message:'Account created successfully',
-        type:"success",
-        description:""
-      })
-      setTimeout(()=>{router.push("/auth/signin")},2000)
-    }
-    const data = (await res.json()) as baseResponseType;
-    if(res.status == 400 || res.status == 500){
-      notification({
-        message:data.message,
-        type:"error",
-        description:""
-      })
-    }
-    // Handle error using status codes, from the response,data.data is always null on error
-    // e.g if(res.status == 400){ ...do something... }
-    // data.message which is the message to be displayed to users
-  };
+//     }
+//     email_display.innerText="";
+//     uname_display.innerText=""
+//     d.innerText=""
+//     terms.innerText=""
+//     pass.innerText=""
+//     setLoading(true)
+//     const res = await fetch(URLRESOLVE("/api/auth/sign-up"), {
+//       method: "POST",
+//       mode: "no-cors",
+//       cache: "no-cache",
+//       body: JSON.stringify(body),
+//     });
+//     setLoading(false)
+//     if (res.status == 201) {
+//       notification({
+//         message:'Account created successfully',
+//         type:"success",
+//         description:""
+//       })
+//       setTimeout(()=>{router.push("/auth/signin")},2000)
+//     }
+//     const data = (await res.json()) as baseResponseType;
+//     if(res.status == 400 || res.status == 500){
+//       notification({
+//         message:data.message,
+//         type:"error",
+//         description:""
+//       })
+//     }
+//     // Handle error using status codes, from the response,data.data is always null on error
+//     // e.g if(res.status == 400){ ...do something... }
+//     // data.message which is the message to be displayed to users
+//   };
 
 
   return (
@@ -359,7 +359,7 @@ const calculateStrength = (pass: string) => {
           className={
             " text-base text-white font-bold p-2 my-12  rounded mb-3 block w-[100%] mx-auto sm:w-[200px] bg-black " 
           }
-          onClick={SignupSubmit}
+        //   onClick={SignupSubmit}
         >
           Submit
         </button>

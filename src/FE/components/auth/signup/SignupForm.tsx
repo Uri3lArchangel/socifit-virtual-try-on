@@ -288,7 +288,7 @@ const calculateStrength = (pass: string) => {
       <p id="email_display"></p>
       <div>
         <label htmlFor="password" className="block text-sm mb-3 sm:text-xl">
-          Password "
+          Password *
         </label>
         <div>
           <div className="flex border-b-2 border-[#B58419] mb-6">  

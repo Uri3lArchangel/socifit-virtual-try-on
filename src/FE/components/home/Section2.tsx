@@ -85,7 +85,7 @@ const Section2 = () => {
         />
         <div className="p-4">
           <h4 className="text-xl font-medium md:text-2xl">
-          CLICK "TRY ON" 
+          CLICK &quot;TRY ON&quot;
           </h4>
           <ul>
             <li className='md:text-xl'>✅ High quality output render</li>

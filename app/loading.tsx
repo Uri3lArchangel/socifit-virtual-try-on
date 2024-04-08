@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from 'react'
 
 const Loading = () => {
      return (
-    <div className='loading-container-nav flex items-center justify-center text-[20px] text-[#F9CB00] z-10'>
+    <div className='loading-container-nav flex items-center justify-center text-[20px] text-[#DBD1F7] z-10'>
       Please Wait...
     </div>
   )

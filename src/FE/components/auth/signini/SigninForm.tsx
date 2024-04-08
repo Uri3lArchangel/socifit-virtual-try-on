@@ -8,7 +8,7 @@ import loader from '@/public/spinner.gif'
 const SigninForm = () => {
   const [loading,setLoading]=useState(false)
   const [showPassword, setShowPassword] = useState(false);
-  const togglePasswordVisibility = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const togglePasswordVisibility = (e: React.MouseEvent<SVGSVGElement>) => {
     e.preventDefault();
     setShowPassword(!showPassword);
   };

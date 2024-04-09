@@ -11,7 +11,7 @@ import SixDigitInputField from '../../utils/SixDigitInputField'
   <h1 className='text-2xl font-bold text-[#000]'>Verify your mail</h1>
   <p className='text-black text-center w-full'>A 6 digit OTP code was sent to {email} </p>
   <p className='text-black text-center w-full'>Enter the code to complete the verification process</p>
-<SixDigitInputField timer={0}  />
+<SixDigitInputField   />
 </div>
   )
 }

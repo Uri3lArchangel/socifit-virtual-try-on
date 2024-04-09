@@ -30,7 +30,7 @@ export default async function RootLayout({
         {children}
         </NotificationApp>
         </SessionProvider>
-        <footer className="bg-black text-white py-8 text-center mt-20">
+        <footer className="bg-black text-white py-8 text-center ">
       © SOCIFIT Inc. 2023
       </footer>
         </body>

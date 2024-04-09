@@ -9,7 +9,7 @@ const initialState={
   message:"",type:""
 }
 
-const SixDigitInputField: React.FC<{timer:number|undefined}> = ({timer}:{timer?:number}) => {
+const SixDigitInputField = () => {
   const router = useRouter()
   const [inputs, setInputs] = useState<string[]>(Array(6).fill(''));
   const notification=useContext(NotificationContext)!
@@ -60,9 +60,10 @@ const SixDigitInputField: React.FC<{timer:number|undefined}> = ({timer}:{timer?:
       message:state.message,
       description:''
     })
-    if(state.type != "error" && state.type != "warning" ){
-      router.push("/app")
-    }
+   
+  }
+  if(state.type != "error" && state.type != "warning" ){
+    router.push("/app")
   }
   };
 

@@ -18,7 +18,7 @@ async function page() {
     }
 
     return (  
-      <div className="bg-white text-black mt-20 py-12 px-6 my-4 rounded-md w-[95%] mx-auto max-w-[400px] shadow-div">
+      <div className="bg-white text-black mt-20 mb-10 py-12 px-6 my-4 rounded-md w-[95%] mx-auto max-w-[400px] shadow-div">
       <EmailVerificationComponent email={user.email} />
       <ResendVerificationCode email={user.email} />
       </div>

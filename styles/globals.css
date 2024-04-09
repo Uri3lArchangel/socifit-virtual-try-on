@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root{
-    --bg-grad:linear-gradient(#0464e1,#3e75ff,#0048ff,#198dfa,#DBD1F7,);
+    --bg-grad:linear-gradient(to right,#00bbff,1%,#198dfa,40%,#DBD1F7);
 }
+
 .ant-notification-notice-message{
     color: white !important;
 }

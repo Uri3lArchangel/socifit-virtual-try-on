@@ -20,6 +20,9 @@ export const URLRESOLVE = (a: string) => {
 };
 
 export function code_generator() {
+  if(`${Math.ceil(Math.random() * 1000000)}`.length != 6){
+    code_generator()
+  }
   return Math.ceil(Math.random() * 1000000);
 }
 export const passwordHasher = (password: string) => {

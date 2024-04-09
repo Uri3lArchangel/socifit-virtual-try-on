@@ -16,12 +16,12 @@ const fetchUserViaJWT=async(cookie:any)=>{
 export async function middleware(request: NextRequest) {
    try{ 
     let cookie;
-    const cookieObj = cookies().get("denon_session_0")
+    const cookieObj = cookies().get("gt_0_")
     if(cookieObj){
         cookie = cookieObj.value
     }
 
-    const session =await fetchUserViaJWT(request.cookies.get("denon_session_0"))
+    const session =await fetchUserViaJWT(request.cookies.get("gt_0_"))
     if(!session && (!request.nextUrl.pathname.includes("/auth"))){
         return NextResponse.redirect(new URL("/auth/signin",request.nextUrl))
     }
@@ -39,7 +39,6 @@ export async function middleware(request: NextRequest) {
             return NextResponse.redirect(new URL("/",request.nextUrl))
         }
         if(!session.verified){
-            console.log({session,"hello":"hi"})
             const res = await fetch(process.env.baseURL+"/api/auth/updateVerification",{method:"POST",body:JSON.stringify({cookie})})   
         }
       }

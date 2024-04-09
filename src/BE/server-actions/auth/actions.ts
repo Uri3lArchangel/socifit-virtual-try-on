@@ -7,13 +7,21 @@ import { passwordReset } from "../../mail-service/nodemailer"
 export const verifyEmailAction=async(prev:any,code:string)=>{
     try {
        const r=  await updateUserEmailStatusByToken(code)
+       console.log(1)
+
         if(r.type != "success") return  r 
        const user = r.data
+       console.log(2,user)
+
        if(!user.username)return { message:"No user found",type:"warning" }
         const token  = userDataTokenSign(user.username,user.email,true,user.subscription.plan)
+        console.log(3)
+
         setSessionCookie(token)
+        console.log(4)
+
         return{
-            message:" Email address verified",type:"success"
+            message:"Email address verified",type:"success"
         }
     } catch (err:any) {
         return{

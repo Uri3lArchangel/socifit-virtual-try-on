@@ -14,6 +14,6 @@ export async function GET(req:NextRequest){
     deleteSessionCookie()
     
     return NextResponse.redirect(new URL("/",req.nextUrl),{status:308})}catch(err:any){
-        console.error(err)
+      return  NextResponse.redirect(new URL("/auth/signin",req.nextUrl))
     }
 }

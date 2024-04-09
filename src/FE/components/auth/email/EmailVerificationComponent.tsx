@@ -4,7 +4,7 @@ import emailImg from '@/public/email.svg'
 import Image from 'next/image'
 import SixDigitInputField from '../../utils/SixDigitInputField'
 
-async function EmailVerificationComponent({email}:{email:string}) {
+ function EmailVerificationComponent({email}:{email:string}) {
   return (
 <div className='flex flex-col items-center w-full space-y-4'>
   <Image src={emailImg} alt='email' />

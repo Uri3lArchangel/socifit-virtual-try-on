@@ -3,13 +3,14 @@ import { verifyEmailAction } from '@/src/BE/server-actions/auth/actions';
 import React, { useState, useRef, useEffect, useContext } from 'react';
 import { useFormState } from 'react-dom';
 import { NotificationContext } from '../../contexts/Notification';
+import { useRouter } from 'next/navigation';
 
 const initialState={
   message:"",type:""
 }
 
 const SixDigitInputField: React.FC<{timer:number|undefined}> = ({timer}:{timer?:number}) => {
-
+  const router = useRouter()
   const [inputs, setInputs] = useState<string[]>(Array(6).fill(''));
   const notification=useContext(NotificationContext)!
   const [state,formAction] = useFormState(verifyEmailAction,initialState)
@@ -53,11 +54,16 @@ const SixDigitInputField: React.FC<{timer:number|undefined}> = ({timer}:{timer?:
     const fullNumber = inputs.join('');
     formAction(fullNumber)
     console.log({state})
+    if(state.message){
     notification({
       type:state.type as any,
       message:state.message,
       description:''
     })
+    if(state.type != "error" && state.type != "warning" ){
+      router.push("/app")
+    }
+  }
   };
 
   return (

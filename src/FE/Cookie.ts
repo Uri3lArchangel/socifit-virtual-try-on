@@ -8,12 +8,10 @@ export const setSessionCookie = (token:string)=>{
         secure:true,
         httpOnly:true,
     })
-revalidateTag("cookie_revalidate")
 }
 
 
 
 export const deleteSessionCookie=()=>{
     cookies().delete("gt_0_")
-    revalidateTag("cookie_revalidate")
 }

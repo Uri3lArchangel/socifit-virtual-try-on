@@ -36,7 +36,7 @@ if(state.type == 'success'){
     return () => {
       clearInterval(timerId);
     };
-  }, [state.type, state.message]);
+  }, [state.time, notification,state.type]);
 
   
   return (

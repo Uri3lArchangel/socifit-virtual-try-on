@@ -7,7 +7,7 @@ import { revalidateTag } from "next/cache"
 import { NextResponse } from "next/server"
 
 export async function POST(request:Request){
-
+try{
     const {Email_Username,Password}:{Email_Username:string,Password:string} = await request.json()
     const emailCheck = await findUserByEmail(Email_Username)
 
@@ -46,5 +46,9 @@ if(unameCheck){
 
 
 return  NextResponse.json({'message':'Wrong Credentials','description':'Incorrect Username, Email or Passord'},{status:400})
+}catch(err:any){
+    console.log(err)
+return  NextResponse.json({'message':'An error occured','description':'Incorrect Username, Email or Passord'},{status:400})
 
+}
 }

@@ -1,11 +1,9 @@
-const mongoose = require("mongoose");
-require('dotenv').config({path:".env.local"});
+import mongoose from "mongoose";
 
-
-const connectMongo = async () => {
+export const connectMongo = async () => {
   if (!mongoose.connections[0].db) {
     console.log("connecting")
-    const uri = process.env.mongourl;
+    const uri = process.env.mongourl!;
 
     await mongoose.connect(uri);
     console.log("connected")
@@ -19,4 +17,3 @@ const disconnect = async () => {
   // await mongoose.disconnect();
 };
 
-module.exports = { connectMongo };

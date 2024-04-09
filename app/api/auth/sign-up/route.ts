@@ -1,4 +1,5 @@
 
+import { connectMongo } from "@/connection";
 import { createUser } from "@/src/BE/DB/queries/auth/query";
 import { signUpConfirmation } from "@/src/BE/mail-service/nodemailer";
 import { passwordHasher, validateEmail } from "@/src/FE/helpers";
@@ -6,6 +7,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
   try {
+
     const { email, password, username, confirmPassword } = await req.json();
     
     let st = validateEmail(email)

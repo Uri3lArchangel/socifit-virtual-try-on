@@ -12,7 +12,6 @@ export async function POST(req:NextRequest){
     if(!cookie || !cookie.value){
         return NextResponse.redirect(new URL("/auth/signin",req.nextUrl))
     }
-    console.log({newEmail})
 
         const userData = verifyUserDataToken(cookie.value) as any
         if(!userData){

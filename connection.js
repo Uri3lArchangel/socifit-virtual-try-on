@@ -1,11 +1,11 @@
-import mongoose from "mongoose";
+import { connections, connect } from "mongoose";
 
 export const connectMongo = async () => {
-  if (!mongoose.connections[0].db) {
+  if (!connections[0].db) {
     console.log("connecting")
-    const uri = process.env.mongourl!;
+    const uri = process.env.mongourl;
 
-    await mongoose.connect(uri);
+    await connect(uri);
     console.log("connected")
 
   }
@@ -16,4 +16,3 @@ const disconnect = async () => {
   // Add logic to disconnect from MongoDB when needed (optional)
   // await mongoose.disconnect();
 };
-

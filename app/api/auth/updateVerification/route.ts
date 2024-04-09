@@ -13,7 +13,6 @@ const user = await findUserByEmail(token.email)
 if(user.isEmailVerified){
     const newToken = userDataTokenSign(user.username,user.email,user.isEmailVerified,user.subscription.plan)
     setSessionCookie(newToken)
-    console.log(newToken)
 
 }
 return NextResponse.redirect(new URL("/",req.nextUrl))

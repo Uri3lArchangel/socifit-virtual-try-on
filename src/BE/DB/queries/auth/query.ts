@@ -1,5 +1,8 @@
 import { code_generator } from "@/src/FE/helpers";
 import User from "../../schema/User";
+import { connectMongo } from "@/connection";
+
+connectMongo()
 
 
 export const createUser = async (

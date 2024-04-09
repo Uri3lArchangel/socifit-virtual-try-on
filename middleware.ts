@@ -15,6 +15,7 @@ const fetchUserViaJWT=async(cookie:any)=>{
 
 export async function middleware(request: NextRequest) {
    try{ 
+
     let cookie;
     const cookieObj = cookies().get("gt_0_")
     if(cookieObj){

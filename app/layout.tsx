@@ -3,7 +3,6 @@ import { Barlow_Condensed } from "next/font/google";
 import "../styles/globals.css"
 import Nav from "@/src/FE/components/utils/Nav";
 import NotificationApp from "@/src/FE/contexts/Notification";
-import {connectMongo} from '@/connection'
 import { cookies } from "next/headers";
 import { verifyUserDataToken } from "@/src/FE/JWT";
 import { SessionProvider } from "@/src/FE/hooks/SessionHook";
@@ -21,7 +20,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  await connectMongo()
  
   return (
     <html lang="en">

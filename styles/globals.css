@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --bg-grad:linear-gradient(#0464e1,#3e75ff,#0048ff,#198dfa,#DBD1F7,);
+}
+
 .bg_vector_mobile_1{
     align-content: center;
     align-items: center;

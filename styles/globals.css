@@ -5,7 +5,20 @@
 :root{
     --bg-grad:linear-gradient(to right,#00bbff,1%,#198dfa,40%,#DBD1F7);
 }
+.HEADER{
+    background-image: linear-gradient(to top,#A5EB0C,15%,#b4e03b,25%,#cee6a9,40%,#D6C3DB,#CCB2DE,#AD00EA) ;
 
+}
+
+#herogif{
+transition: all 0.2s ease;
+cursor:crosshair;
+user-select: none;
+}
+
+.herogifContainer{
+    perspective:1500px;
+}
 .ant-notification-notice-message{
     color: white !important;
 }
@@ -136,4 +149,8 @@
     .bg_vector_mobile_2{
         top: -40px;
     }
+    .HEADER{
+    background-image: linear-gradient(to left,#A5EB0C,2%,#b4e03b,5%,#cee6a9,25%,#D6C3DB,#CCB2DE,#AD00EA);
+
+}
 }

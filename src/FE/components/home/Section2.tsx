@@ -1,6 +1,6 @@
 import React from 'react'
-import manFront from "@/public/manfront.webp";
-import manSuit from "@/public/suit.jpg";
+import manFront from "@/public/I-15047WL-SAF_VANILLA-F_600x.webp";
+import manSuit from "@/public/dress.webp";
 import aiPrompt from "@/public/generate-a-red-dress-for-party-in-fotor-ai-clothing-generator.jpg";
 import redDress from "@/public/xs-ryn-gwn-red-bee-16-original-imagc6xx79wj9khj.webp";
 import Image from "next/image";
@@ -44,6 +44,22 @@ const Section2 = () => {
       <div className="md:flex items-center">
       <li className="shadow_2 rounded-lg m-4 max-w-[300px] sm:mx-auto">
         <Image
+          src={aiPrompt}
+          className="rounded-tl-lg rounded-tr-lg min-h-[400px] w-full"
+          alt="man facing front"
+        />
+        <div className="p-4">
+          <h4 className="text-xl font-medium md:text-2xl">GENERATE CLOTHING IMAGE FROM A.I PROMPT</h4>
+          <ul>
+            <li className='md:text-xl'>✅ Front facing</li>
+            <li className='md:text-xl'>✅ Body is visible</li>
+            <li className='md:text-xl'>✅ Medium / High Quality image</li>
+          </ul>
+        </div>
+      </li>
+      <h4 className="text-2xl text-center">OR</h4>
+     <li className="shadow_2 rounded-lg m-4 max-w-[300px] sm:mx-auto">
+        <Image
           src={manSuit}
           className="rounded-tl-lg rounded-tr-lg min-h-[400px]"
           alt="man facing front"
@@ -56,22 +72,6 @@ const Section2 = () => {
             <li className='md:text-xl'>✅ Front facing</li>
             <li className='md:text-xl'>✅ Matches the visible body part </li>
             <li className='md:text-xl'>✅ medium / High Quality image</li>
-          </ul>
-        </div>
-      </li>
-      <h4 className="text-2xl text-center">OR</h4>
-      <li className="shadow_2 rounded-lg m-4 max-w-[300px] sm:mx-auto">
-        <Image
-          src={aiPrompt}
-          className="rounded-tl-lg rounded-tr-lg min-h-[400px] w-full"
-          alt="man facing front"
-        />
-        <div className="p-4">
-          <h4 className="text-xl font-medium md:text-2xl">GENERATE CLOTHING IMAGE FROM A.I PROMPT</h4>
-          <ul>
-            <li className='md:text-xl'>✅ Front facing</li>
-            <li className='md:text-xl'>✅ Body is visible</li>
-            <li className='md:text-xl'>✅ Medium / High Quality image</li>
           </ul>
         </div>
       </li>

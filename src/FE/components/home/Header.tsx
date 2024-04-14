@@ -53,8 +53,7 @@ e.currentTarget.style.transform="none"
     <header className="h-[120vh] md:flex justify-center items-center HEADER">
     <section className="h-[60%] flex items-center md:h-full md:w-[50%] md:transform relative z-[2]">
       <div className="title_container z-[2] relative text-center sm:text-left sm:max-w-[400px] sm:ml-20 ">
-        <h1 className="text-sm font-bold italic md:text-lg">SOCIFIT.AI</h1>
-        <h2 className="text-3xl font-extrabold md:text-6xl">VIRTUAL TRY-ON</h2>
+        <h2 className="text-3xl font-extrabold md:text-6xl">Socifit Virtual Ai Photography</h2>
         <p className="text-[#fff] text-xl font-medium md:text-2xl my-4">
           Transform Your Social Media with AI-Powered Dress and Photography
           Experience. We offer a groundbreaking way to elevate your social

@@ -1,6 +1,6 @@
 import React from 'react'
-import aiTryOn from "@/public/ai-tryon.jpg";
-import bgTransform from "@/public/bgchange.jpg";
+import aiTryOn from "@/public/Why Use Our Service(Personilazed Dress Section Image) (2).jpg";
+import bgTransform from "@/public/Why Use Our Service(Background Transformation Image).png";
 import timeAndCost from "@/public/save-time-money1.jpg";
 import social from "@/public/social-media.jpg";
 import Image from "next/image";
@@ -22,11 +22,11 @@ const Section1 = () => {
         </div>
     <ul className="py-20">
       <li className="my-12 sm:max-w-[462px] sm:mx-auto md:flex md:max-w-[60%] items-center">
-        {/* <Image
+        <Image
           src={aiTryOn}
           alt="ai try-on"
           className="block rounded-lg md:max-w-[500px] h-[400px]"
-        /> */}
+        />
         <div className="text-center px-2 md:text-left">
           <h3 className="text-xl font-semibold py-2 sm:text-2xl md:text-4xl">
             Personalized Real Dress Visualization

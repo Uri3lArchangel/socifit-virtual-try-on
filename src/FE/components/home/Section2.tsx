@@ -1,8 +1,8 @@
 import React from 'react'
-import manFront from "@/public/I-15047WL-SAF_VANILLA-F_600x.webp";
-import manSuit from "@/public/dress.webp";
-import aiPrompt from "@/public/generate-a-red-dress-for-party-in-fotor-ai-clothing-generator.jpg";
-import redDress from "@/public/xs-ryn-gwn-red-bee-16-original-imagc6xx79wj9khj.webp";
+import manFront from "@/public/Step 1 photo.jpg";
+import manSuit from "@/public/Step 2 Image 2.jpg";
+import aiPrompt from "@/public/Step 2 Image 1.png";
+import redDress from "@/public/Step 3 İmage.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -51,9 +51,9 @@ const Section2 = () => {
         <div className="p-4">
           <h4 className="text-xl font-medium md:text-2xl">GENERATE CLOTHING IMAGE FROM A.I PROMPT</h4>
           <ul>
-            <li className='md:text-xl'>✅ Front facing</li>
-            <li className='md:text-xl'>✅ Body is visible</li>
-            <li className='md:text-xl'>✅ Medium / High Quality image</li>
+            <li className='md:text-xl'>✅ Text from general to specific</li>
+            <li className='md:text-xl'>✅ Clearly understandable</li>
+            <li className='md:text-xl'>✅ Details</li>
           </ul>
         </div>
       </li>

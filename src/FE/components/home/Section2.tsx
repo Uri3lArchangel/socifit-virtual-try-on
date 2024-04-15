@@ -2,7 +2,7 @@ import React from 'react'
 import manFront from "@/public/Step 1 photo.jpg";
 import manSuit from "@/public/Step 2 Image 2.jpg";
 import aiPrompt from "@/public/Step 2 Image 1.png";
-import redDress from "@/public/Step 3 İmage.jpg";
+import redDress from "@/public/Step 3 İmage last.png";
 import Image from "next/image";
 import Link from "next/link";
 

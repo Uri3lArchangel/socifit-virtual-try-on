@@ -1,5 +1,5 @@
 import React from 'react'
-import aiTryOn from "@/public/Why Use Our Service(Personilazed Dress Section Image) (2).jpg";
+import aiTryOn from "@/public/Why Use Our Service(Personilazed Dress Section Image) LAST.png";
 import bgTransform from "@/public/Why Use Our Service(Background Transformation Image).png";
 import timeAndCost from "@/public/save-time-money1.jpg";
 import social from "@/public/social-media.jpg";
